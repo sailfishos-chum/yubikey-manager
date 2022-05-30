@@ -64,12 +64,12 @@ connection transports an programming various types of credentials.
 # %setup -q -n %{name}-%{version}/yubikey-manager
 
 %build
-%py3_build
+%python3_build
 # %{__python3} setup.py build
 
 %install
 # %{__python3} setup.py install --skip-build
-%py3_install
+%python3_install
 %fdupes %{buildroot}
 install -Dpm0644 man/ykman.1 %{buildroot}%{_mandir}/man1/ykman.1
 
