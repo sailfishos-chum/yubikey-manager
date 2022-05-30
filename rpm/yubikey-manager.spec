@@ -24,9 +24,9 @@ Summary:        Python 3 library and command line tool for configuring a YubiKey
 License:        BSD-2-Clause
 Group:          Productivity/Security
 URL:            https://developers.yubico.com/yubikey-manager/Releases
-# Source0:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-%{version}.tar.gz
-Source0:        %{name}-%{version}.tar.gz
-# Source1:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-%{version}.tar.gz.sig
+Source0:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-%{version}.tar.gz
+# Source0:        %{name}-%{version}.tar.gz
+Source1:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-%{version}.tar.gz.sig
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig
 BuildRequires:  python3-devel
@@ -60,8 +60,8 @@ configuring several aspects of a YubiKey, including enabling or disabling
 connection transports an programming various types of credentials.
 
 %prep
-# %autosetup -p1
-%setup -q -n %{name}-%{version}/yubikey-manager
+%autosetup -p1
+# %setup -q -n %{name}-%{version}/yubikey-manager
 
 %build
 %py3_build
