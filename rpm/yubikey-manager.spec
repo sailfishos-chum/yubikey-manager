@@ -25,7 +25,6 @@ License:        BSD-2-Clause
 Group:          Productivity/Security
 URL:            https://developers.yubico.com/yubikey-manager/Releases
 Source0:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-4.0.3.tar.gz
-# Source0:        %{name}-%{version}.tar.gz
 Source1:        https://developers.yubico.com/yubikey-manager/Releases/%{name}-4.0.3.tar.gz.sig
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig
@@ -61,20 +60,16 @@ connection transports an programming various types of credentials.
 
 %prep
 %autosetup -p1
-# %setup -q -n %{name}-%{version}/yubikey-manager
 
 %build
 %python3_build
-# %{__python3} setup.py build
 
 %install
-# %{__python3} setup.py install --skip-build
 %python3_install
 %fdupes %{buildroot}
 install -Dpm0644 man/ykman.1 %{buildroot}%{_mandir}/man1/ykman.1
 
 %check
-# python3 -m pytest
 
 %files
 %license COPYING*
