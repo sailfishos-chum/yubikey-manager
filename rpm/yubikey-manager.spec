@@ -60,7 +60,7 @@ configuring several aspects of a YubiKey, including enabling or disabling
 connection transports an programming various types of credentials.
 
 %prep
-%autosetup -n %{name}-%{version}/upstream
+%autosetup -n %{name}-%{version}/yubikey-manager
 
 %build
 %py3_build
