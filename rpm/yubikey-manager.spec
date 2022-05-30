@@ -61,10 +61,10 @@ connection transports an programming various types of credentials.
 %autosetup -p1
 
 %build
-%python3_build
+%py3_build
 
 %install
-%python3_install
+%py3_install
 %fdupes %{buildroot}
 install -Dpm0644 man/ykman.1 %{buildroot}%{_mandir}/man1/ykman.1
 
