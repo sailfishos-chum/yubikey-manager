@@ -25,6 +25,8 @@ License:        BSD-2-Clause
 Group:          Productivity/Security
 URL:            https://github.com/Yubico/yubikey-manager
 Source0:        %{name}-%{version}.tar.bz2
+
+BuildArch:      noarch
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig
 BuildRequires:  python3-devel
@@ -58,7 +60,7 @@ configuring several aspects of a YubiKey, including enabling or disabling
 connection transports an programming various types of credentials.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-%{version}/
 
 %build
 %py3_build
